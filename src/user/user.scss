@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+$lendsqrBlue: #213F7D;
+$grey:#545F7D;
+$green:#39CDCC;
+@mixin centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.user{
+    @include centerDiv();
+    flex-wrap: wrap;
+}

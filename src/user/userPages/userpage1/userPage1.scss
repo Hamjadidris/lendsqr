@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+$lendsqrBlue: #213f7d;
+$grey: #545f7d;
+$green: #39cdcc;
+@mixin centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userpage1 {
+  width: 80vw;
+  height: 89vh;
+  padding: 6vh;
+  overflow: scroll;
+
+  h2 {
+    color: $lendsqrBlue;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  table {
+    margin-top: 3vh;
+    width: 100%;
+    height: 90%;
+    padding: 2vh;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+
+    thead {
+      
+      tr { 
+        th {
+          white-space: nowrap;
+          width: fit-content;
+          text-align: left;
+          p {
+            width: fit-content;
+            display: inline;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: $lendsqrBlue;
+            position: relative;
+            margin-right: 0.4rem;
+            bottom: 0.2rem;
+          }
+        }
+      }
+    }
+    tbody{
+        font-size: 0.8rem;
+        color: $lendsqrBlue;
+    }
+  }
+}
