@@ -1,4 +1,5 @@
 export interface props{
+    id:string
     organization: string
     username: string
     email:string
@@ -6,18 +7,19 @@ export interface props{
     dateJoined:string
     status:string
     className?: string
+    icon:string
 }
 
 const UserInterface = (props: props) => {
   return (
-        <tr className={props.className}>
+        <tr className={props.className} key={props.id}>
             <td>{props.organization}</td>
             <td>{props.username}</td>
             <td>{props.email}</td>
             <td>{props.phoneNumber}</td>
             <td>{props.dateJoined}</td>
-            <td>{props.status}</td>
-            <td><button>\\</button></td>
+            <td>{<img alt='edit' src={props.status}/>}</td>
+            <td><button><img alt='edit' src={props.icon}/></button></td>
         </tr>
   )
 }

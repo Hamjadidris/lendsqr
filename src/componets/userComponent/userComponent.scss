@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.pagination{
+    position: absolute;
+    bottom: -11rem;
+    left: 10rem;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+
+    .postsAmount{
+        display: flex;
+        align-items: center;
+
+        select{
+            margin: 0 0.3rem;
+            background-color: red;
+            background: rgba(33, 63, 125, 0.1);
+            border-radius: 4px;
+        }
+        
+    }
+    .pageBtn{
+        button{
+            border: none;
+            background: transparent;
+        }
+    }
+}

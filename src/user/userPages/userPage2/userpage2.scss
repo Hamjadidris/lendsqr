@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+$lendsqrBlue: #213f7d;
+$grey: #545f7d;
+$green: #39cdcc;
+@mixin centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userpage2 {
+  width: 80vw;
+  height: 89vh;
+  padding: 6vh;
+  overflow-y: scroll;
+}
+
+.back-btn {
+  display: flex;
+  width: 9.5rem;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.header-details {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+
+  .act-black-btn {
+    @include centerDiv();
+    gap: 1rem;
+  }
+}
+
