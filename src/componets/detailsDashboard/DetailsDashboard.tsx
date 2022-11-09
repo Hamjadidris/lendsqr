@@ -9,7 +9,7 @@ const DetailsDashboard = () => {
     <div className='user-info'>
         <img alt='avatar' src={avatar}/>
         <section className='user-info-section1'>
-                <h1>Grace Effiom</h1>
+                <h1>Darian Rolfson</h1>
                 <h5>LSQFf587g90</h5>
         </section>
         <section className='user-info-section2'>

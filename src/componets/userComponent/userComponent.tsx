@@ -8,19 +8,23 @@ import Pagination from "./Pagination";
 
 const UserComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(false);
   const [usersPerPage, setUsersPerPage] = useState(10);
   const [userObject, setUserObject] = useState<any[]>([]);
 
   useEffect(() => {
     const getUsers = async () => {
+      setLoading(true)
       const res = await axios.get(
         "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users"
       );
       const fetchedUsers = res.data;
       setUserObject(fetchedUsers);
+      setLoading(false)
     };
     getUsers();
   }, []);
+
 
   const lastPostIndex = currentPage * usersPerPage;
   const firstPostIndex = lastPostIndex - usersPerPage;
@@ -30,6 +34,9 @@ const UserComponent = () => {
     return date.slice(0,10)
   }
 
+  if(loading){
+   return <h1>loading users...</h1>
+  }
   return (
     <>
       {currentUsers.map((user) => (
