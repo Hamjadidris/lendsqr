@@ -42,5 +42,12 @@ $green:#39CDCC;
         }
     }
 }
-
+@media (max-width: 1000px) {
+    .cards{
+        flex-wrap: wrap;
+        .card{
+            width: 48%;
+        }
+    }
+}
     

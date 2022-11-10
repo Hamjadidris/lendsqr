@@ -33,6 +33,7 @@ $green: #39cdcc;
     border: 1px solid rgba(33, 63, 125, 0.06);
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
     border-radius: 4px;
+    overflow-y: scroll;
     table {
       min-width: 100%;
       height: 100%;
@@ -62,7 +63,7 @@ $green: #39cdcc;
         font-size: 0.8rem;
         color: $lendsqrBlue;
 
-        :nth-last-child(2){
+        :nth-last-child(2) {
           border: none;
         }
 
@@ -81,6 +82,50 @@ $green: #39cdcc;
             border: none;
             width: 4rem;
             background-color: transparent;
+          }
+        }
+        .show {
+          position: absolute;
+          top: 25rem;
+          right: 5rem;
+          border: 1px solid rgba(84, 95, 125, 0.04);
+          box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+          border-radius: 4px;
+          width: 11rem;
+          height: 8rem;
+          z-index: 1000;
+          display: flex;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+
+          button {
+            width: 100%;
+            border: none;
+            @include centerDiv();
+            cursor: pointer;
+            justify-content: space-evenly;
+          }
+        }
+        .hide {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .userpage1{
+    width: 98vw;
+    padding: 1vh;
+
+    .table{
+      table{
+        position: relative;
+  
+        tbody{
+          .show{
+            top: 10rem;
+            right: 3rem;
           }
         }
       }

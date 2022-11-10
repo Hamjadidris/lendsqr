@@ -1,3 +1,4 @@
+
 export interface props{
     id:string
     organization: string
@@ -8,6 +9,7 @@ export interface props{
     status:string
     className?: string
     icon:string
+    click:any
 }
 
 const UserInterface = (props: props) => {
@@ -19,7 +21,7 @@ const UserInterface = (props: props) => {
             <td>{props.phoneNumber}</td>
             <td>{props.dateJoined}</td>
             <td>{<img alt='edit' src={props.status}/>}</td>
-            <td><button><img alt='edit' src={props.icon}/></button></td>
+            <td><button onClick={props.click}><img alt='edit' src={props.icon}/></button></td>
         </tr>
   )
 }

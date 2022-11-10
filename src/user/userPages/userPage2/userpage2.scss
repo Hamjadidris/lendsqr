@@ -38,3 +38,14 @@ $green: #39cdcc;
   }
 }
 
+@media (max-width: 1000px) {
+  .userpage2{
+    min-height: 90vh;
+    padding: 1vh;
+    width: 98vw;
+
+    .header-details{
+      flex-direction: column;
+    }
+  }
+}

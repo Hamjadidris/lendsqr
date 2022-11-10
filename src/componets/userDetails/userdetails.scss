@@ -20,34 +20,42 @@ $green: #39cdcc;
   margin: 4vh 0;
   padding: 4vh;
 
-  .main-section{
+  .main-section {
     border-bottom: 1px solid $grey;
     height: 25%;
     padding: 2vh 0;
-    h1{
+    h1 {
       font-size: 1rem;
       font-weight: 600;
       color: $lendsqrBlue;
     }
-    .info-section{
+    .info-section {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      width:100%;
-      margin-top:1.5rem;
+      width: 100%;
+      margin-top: 1.5rem;
       color: $grey;
 
-      div{
+      div {
         min-width: 20%;
-        label{
+        label {
           font-size: 0.8rem;
           font-weight: 400;
         }
-        h2{
+        h2 {
           font-size: 1rem;
           font-weight: 500;
         }
       }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .userdetails {
+    height: fit-content;
+    .main-section {
+      max-height: 30vh;
     }
   }
 }

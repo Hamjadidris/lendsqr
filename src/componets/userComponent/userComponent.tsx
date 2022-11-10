@@ -5,11 +5,16 @@ import editbtn from "../../assets/editbtn.svg";
 import pending from "../../assets/pending pill.svg";
 import UserInterface from "./userInterface";
 import Pagination from "./Pagination";
+import activateIcon from '../../assets/activateIcon.svg'
+import viewIcon from '../../assets/viewIcon.svg'
+import blacklistIcon from '../../assets/blacklistIcon.svg'
 
-const UserComponent = () => {
+
+const UserComponent = ({ handlePage2 }:any) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [usersPerPage, setUsersPerPage] = useState(10);
+  const [option, showOption] = useState(false);
   const [userObject, setUserObject] = useState<any[]>([]);
 
   useEffect(() => {
@@ -25,7 +30,6 @@ const UserComponent = () => {
     getUsers();
   }, []);
 
-
   const lastPostIndex = currentPage * usersPerPage;
   const firstPostIndex = lastPostIndex - usersPerPage;
   const currentUsers = userObject.slice(firstPostIndex, lastPostIndex);
@@ -34,6 +38,12 @@ const UserComponent = () => {
     return date.slice(0,10)
   }
 
+  function handleOption (){
+    if(option){
+      return showOption(false)
+    }
+    showOption(true)
+  }
   if(loading){
    return <h1>loading users...</h1>
   }
@@ -50,8 +60,14 @@ const UserComponent = () => {
           dateJoined={dateString(user.createdAt)}
           status={pending}
           icon={editbtn}
+          click={handleOption}
         />
       ))}
+      <div className={(option)?('show'):('hide')}>
+              <button onClick={ handlePage2 }> <img alt="view" src={viewIcon}/> View Details</button>
+              <button> <img alt="blacklist" src={blacklistIcon}/>Blacklist User</button>
+              <button> <img alt="activate" src={activateIcon}/>Activate User</button>
+      </div>
       <Pagination
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}

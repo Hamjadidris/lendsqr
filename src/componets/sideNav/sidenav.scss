@@ -54,3 +54,9 @@ $green:#39CDCC;
 .dashboard{
     height: 2vh;
 }
+
+@media (max-width: 1000px) {
+    .sidenav{
+        display: none;
+    }
+}

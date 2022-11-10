@@ -13,7 +13,7 @@ const User = () => {
     const handlePage1 = () =>{
       setUserPage({Page1:true, page2:false})
     }
-    const handlePage2 = () =>{
+   const handlePage2 = () =>{
       setUserPage({Page1:false, page2:true})
     }
   return (

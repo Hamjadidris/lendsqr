@@ -70,3 +70,20 @@ $green: #39cdcc;
         }
     }
   }
+  @media (max-width: 1000px) {
+    .details-dashboard{
+
+      .user-info{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        section{
+          height:50%;
+        }
+      }
+      .dashboard-links{
+        display: none;
+      }
+    }
+  }

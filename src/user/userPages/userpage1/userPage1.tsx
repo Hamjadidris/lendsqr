@@ -21,11 +21,11 @@ const UserPage1 = ( { handlePage2 }:any ) => {
                   </tr>
                 </thead>
                 <tbody>
-                    <UserComponent/>
+                    <UserComponent handlePage2 ={handlePage2} />
                 </tbody>
             </table>
       </div>
-      <button onClick={handlePage2}>vv</button>
+      {/* <button onClick={handlePage2}>vv</button> */}
     </div>
   )
 }
